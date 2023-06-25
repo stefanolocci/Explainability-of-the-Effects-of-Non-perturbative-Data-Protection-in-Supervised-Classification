@@ -154,7 +154,7 @@ def shap_explain(m, test_feat, k, mod_name, ldiv):
     Parameters:
         - m: The trained model to be explained.
         - test_feat (pd.DataFrame): The test features used for generating explanations.
-        - k (int): The number of features to display in the SHAP beeswarm plot.
+        - k (int): anonymization factor
         - mod_name (str): The name of the model.
         - ldiv: Parameter for SHAP beeswarm plot.
 
@@ -174,7 +174,6 @@ def plot_features_analysis(data):
 
     Parameters:
         - data (pd.DataFrame): The dataset to analyze.
-
     """
     data = data.drop('ID', axis=1)
     for col in data.columns:
